@@ -29,6 +29,20 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on Railway
+
+1. **Create a GitHub repo** (if you don’t have one), then add it as a remote and push:
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/chatcrm.git
+   git push -u origin main
+   ```
+
+2. **Connect Railway**: Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub repo → select `chatcrm`.
+
+3. **Set env vars** in the Railway project: **Variables** → Add `OPENAI_API_KEY`, `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` (same as `.env.local`).
+
+4. Railway will run `npm run build` and `npm start`. After deploy, open the generated URL (e.g. `https://chatcrm-production.up.railway.app`). Use that URL in my.telegram.org when creating your app if needed.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
